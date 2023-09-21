@@ -1,0 +1,7 @@
+{
+  "name": "minimal-memory-leak",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
