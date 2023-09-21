@@ -13,5 +13,19 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-button (click)="searchbarVisible = !searchbarVisible">Toggle Searchbar</ion-button>
+
+  <!-- This leaks memory -->
+  <div *ngIf="searchbarVisible">
+    <ion-searchbar></ion-searchbar>
+  </div>
+
+  <!-- This does not leak memory -->
+  <!--   
+  <div>
+    <ion-searchbar *ngIf="searchbarVisible"></ion-searchbar>
+  </div>
+  -->
+
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
